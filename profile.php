@@ -1,19 +1,4 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-</head>
-
-<body>
     <?php
     // connect ke database sementara
     $servername = "localhost";
@@ -28,6 +13,8 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+
+    include 'auth_header.php';
     ?>
 
     <div class="container mt-5">
@@ -38,7 +25,7 @@
                 <div class="col-lg-6 justify-content-x">
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3 mt-5" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <img src="img/defaults.png" class="card-img" alt="...">
@@ -51,7 +38,7 @@
                         </div>
                         <div class="btn btn-info ml-3 my-3 ms-3">
                             <!-- edit profile -->
-                            <a href="" class="text text-white"><i class="fas fa-user-edit"></i> Ubah Profil</a>
+                            <a href="" class="text-white bi bi-pencil-square link-offset-2 link-underline link-underline-opacity-0">Ubah Profil</a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +69,7 @@
                     $a = 1;
                     foreach ($review as $r) { ?>
 
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-4 mt-4 cars-item filter-<?= $r['tipe']; ?> min-height: 540px">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-4 mt-4 cars-item filter-<?= $r['tipe']; ?> min-height: 540px">
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="d-flex align-items-center mt-4">
                                     <img src="img/default.png" class="img-fluid rounded-start ms-4 pt-2" style="width: 30px;">
@@ -159,11 +146,6 @@
 </div>
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-<!-- JS files: jQuery pertama, lalu Popper.js, selanjutnya Bootstrap JS, lalu Font Awesome JS-->
-
-</body>
-
-</html>
+<?php
+include 'footer.php' ;
+?>
