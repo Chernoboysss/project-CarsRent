@@ -73,19 +73,19 @@
 
                                     <ul class="dropdown-menu dropdown-menu-right shadow animated--grow-in mt-3">
                                         <li>
-                                            <a class="dropdown-item text-gray small " href="#">Home
+                                            <a class="dropdown-item text-gray small " href="<?= base_url('home') ?>">Home
                                                 <i class="bi bi-house-door-fill text-gray"></i>
                                             </a>
                                         </li>
                                         <div class="dropdown-divider"></div>
                                         <li>
-                                            <a class="dropdown-item text-gray small " href="#">My profile
+                                            <a class="dropdown-item text-gray small " href="<?= base_url('profil')?>">My profile
                                                 <i class="bi bi-person-fill text-gray"></i>
                                             </a>
                                         </li>
                                         <div class="dropdown-divider"></div>
                                         <li>
-                                            <a class="dropdown-item text-gray small " href="#">Logout
+                                            <a class="dropdown-item text-gray small " href="<?= base_url('autentifikasi/logout') ?>">Logout
                                                 <i class="fas fa-sign-out-alt fa-sm fa-fw text-gray"></i>
                                             </a>
                                         </li>

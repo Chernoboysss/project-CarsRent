@@ -37,6 +37,7 @@ foreach ($tipe as $t) { ?>
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12 cars-item filter-<?= $r->tipe; ?> align-items-stretch mt-4">
                     <div class="cars-wrap">
+                        <img src="<?= base_url('assets/img/star/star5.png') ?>" alt="" style="width: 100px;" class="img-fluid rounded mx-auto d-block mb-3">
                         <div class="cars-img">
                             <img src="<?= base_url('assets/img/cars/') . $r->gambar; ?>" alt="" class="img-fluid">
 

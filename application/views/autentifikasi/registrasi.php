@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CarsRent</title>
+    <link rel="icon" href="<?= base_url('assets/img/carsrent.png') ?>">
+
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -58,31 +60,6 @@
                         <div class="mb-3">
                             <label class="form-label">Nomor Handphone</label>
                             <input type="text" class="form-control" placeholder="Masukan Nomor Handphone" name="nohp" required>
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" placeholder="Masukan Nama Lengkap" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Username</label>
-                            <input type="text" class="form-control" placeholder="Masukan Username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="Masukan Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <input type="email" class="form-control" placeholder="Masukan password" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Masukkan password lagi</label>
-                            <input type="email" class="form-control" placeholder="Masukan password" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Handphone</label>
-                            <input type="text" class="form-control" placeholder="Masukan Nomor Handphone" required>
-
                         </div>
                         
                         <div class="mb-3">

@@ -2,12 +2,16 @@
 class Contact extends CI_Controller {
     /// contact bisa diakses oleh guest dan user
     public function index(){
-        $this->load->view('templates/header');
+        if ($this->session->userdata('username')) {
+            $this->load->view('templates/login_header');
+        } else {
+            $this->load->view('templates/header');
+        }
         $this->load->view('contact/index');
         $this->load->view('templates/footer');
     }
     public function inputcontact() {
-
+        
         $this->load->database();
 
         $nama = $this->input->post('nama') ? $this->input->post('nama') : null;

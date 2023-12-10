@@ -19,7 +19,7 @@ if ($conn->connect_error) {
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-lg-6 justify-content-x">
+            <div class="col-lg-6 justify-content-x mt-5">
                 <div class="card card border-left-primary shadow h-100 py-2 " style="max-width: 600px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -40,7 +40,7 @@ if ($conn->connect_error) {
                 </div>
             </div>
 
-            <div class="col-lg-6 justify-content-x">
+            <div class="col-lg-6 justify-content-x mt-5">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -156,9 +156,6 @@ if ($conn->connect_error) {
                                     <input type="text" class="form-control" id="nohp" name="nohp" value="nohp yang awal">
                                 </div>
                             </div>
-<
-
-
                             <div class="form-group row">
                                 <div class="col-sm-3">Gambar</div>
                                 <div class="col-sm-8">
@@ -211,36 +208,7 @@ if ($conn->connect_error) {
                 </div>
             </div>
         </div>
-    </div>
-=
-
-                            <div class="form-group row">
-                                <div class="col-sm-3">Gambar</div>
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <img src="<?= base_url('assets/img/profil/defaults.png') ?>" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="image" name="image">
-                                                <label class="custom-file-label" for="image">Pilih file</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row justify-content-end">
-                                <div class="col-sm-12 d-flex justify-content-end gap-2">
-                                    <button type="submit" class="btn btn-primary">Ubah</button>
-                                    <button class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close"> Kembali</button>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- akhir isi -->
+    </div>            <!-- akhir isi -->
                 </div>
             </div>
         </div>

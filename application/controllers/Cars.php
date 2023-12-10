@@ -1,33 +1,46 @@
 <?php
 
-class Cars extends CI_Controller {
+class Cars extends CI_Controller
+{
 
-        public function __construct() {
-            parent::__construct();
-            cek_login();
-            $this->load->model('ModelCars');
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('ModelCars');
+        $this->load->model('ModelUser');
+    }
+
+    public function index()
+    {
+        if ($this->session->userdata('username')) {
+            $data['cars'] = $this->ModelCars->getcars();
+            $data['tipe'] = $this->ModelCars->getTipe();
+            $this->load->view('templates/login_header');
+            $this->load->view('cars/index', $data);
+            $this->load->view('cars/modallogin');
+            $this->load->view('templates/footer');
+        } else {
+            $data['cars'] = $this->ModelCars->getcars();
+            $data['tipe'] = $this->ModelCars->getTipe();
+            $this->load->view('templates/header');
+            $this->load->view('cars/index', $data);
+            $this->load->view('cars/modalnotlogin');
+            $this->load->view('templates/footer');
         }
-
-        public function index(){
-	    $data['cars'] = $this->ModelCars->getcars();
-        $data['tipe'] = $this->ModelCars->getTipe();
-
-        $this->load->view('templates/header');
-        $this->load->view('cars/index', $data);
-        // $this->load->view('cars/modalnotlogin');
-        $this->load->view('cars/modallogin');
-        $this->load->view('templates/footer');
-}
-    public function inputreview() {
+        
+        
+    }
+    public function inputreview()
+    {
         $this->load->database();
-
-        $id_user = $this->input->post('nama') ? $this->input->post('nama') : null;
+        
+        $id_user = $this->ModelUser->getinfo();
         $id_mobil = $this->input->post('id_modal') ? $this->input->post('id_modal') : null;
         $review = $this->input->post('review') ? $this->input->post('review') : null;
         $rating = $this->input->post('rating') ? $this->input->post('rating') : null;
 
         $data = array(
-            'id_user' => $id_user,
+            'id_user' => $id_user[0]['id_user'],
             'id' => $id_mobil,
             'rating' => $rating,
             'massage' => $review
@@ -40,7 +53,7 @@ class Cars extends CI_Controller {
     {
         $id_review = $this->input->post('id_review');
 
-        
+
     }
 
 
@@ -49,9 +62,9 @@ class Cars extends CI_Controller {
     {
         $id_review = $this->input->post('id_review');
 
-        
+
     }
-    public function tambahmobil() 
+    public function tambahmobil()
     {
         $id_user = $this->input->post('nama') ? $this->input->post('nama') : null;
         $id_mobil = $this->input->post('id_modal') ? $this->input->post('id_modal') : null;
